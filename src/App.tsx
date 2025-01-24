@@ -38,12 +38,26 @@ function App() {
 
   return (
     <div className="p-4">
-      <input className="border p-1" type="text" onChange={handleChange} />
-      <ul className="mt-4">
-        {filteredItems.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
+      <h1 className="text-xl font-bold">入力して0.5秒後に変更を反映</h1>
+      <div className="mt-4">
+        <div>
+          <label htmlFor="input" className="block">
+            人物を絞り込む
+          </label>
+        </div>
+
+        <input
+          id="input"
+          className="border p-1"
+          type="text"
+          onChange={handleChange}
+        />
+        <ul className="mt-4">
+          {filteredItems.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
